@@ -14,8 +14,11 @@ def check_and_replace_key():
     key = input("Enter a key to check: ")
     if key in days:
         print("Key Found. Replace with new key/value pair.")
-        days[key] = "Imaginary Bulls**t"
-        days["Imaginary Day"] = days.pop(key)
+        del days[key]
+        days["Imaginary Day"] = "Party Day"
+        #how to Replace key vaLue pair without changing the order of the dictionary @atharva
+        #days[key] = "Party Day"
+        #days["Imaginary Day"] = days.pop(key)
         print(days)
         
     else:

@@ -5,10 +5,13 @@
 # 7 8 9 10
 
 
-num = 1
-for i in range(4):
-    for _ in range(i+1):
-        print(num, end=" ")
-        num = num + 1
-    print("\r")
 
+n = 4  # number of rows
+
+num = 1  # keeps track of the number to print
+for i in range(n):
+    # print the numbers for this row
+    for j in range(i + 1):
+        print(num, end=' ')
+        num = num + 1
+    print()  # move to the next line

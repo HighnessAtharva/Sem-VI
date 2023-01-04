@@ -16,10 +16,8 @@ def factorial(N):
     return 1 if N == 0 else N * factorial(N-1)
 
 
-print(check_prime(7))
 print(check_prime(6))
-print(check_prime(13))
+print(check_prime(2))
 print("====================================")
 print(f"Factorial of 5 is: {factorial(5)}")
 print(f"Factorial of 0 is: {factorial(0)}")
-print(f"Factorial of 6 is: {factorial(6)}")

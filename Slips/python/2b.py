@@ -10,5 +10,5 @@ def count_upper_lower(text):
             lower += 1
     return f"Uppercase Characters: {upper}\nLower Characters: {lower}"
 
-print(count_upper_lower("Hello World"))
-print(count_upper_lower("I am a Python Developer!"))
+text = input("Enter a string: ")
+print(count_upper_lower(text))
