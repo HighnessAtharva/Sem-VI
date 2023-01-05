@@ -1,4 +1,4 @@
-# Write a Python program to print whether a given number is Armstrong or not. 
+# Write a Python program to print whether a given number is Armstrong or not.
 
 def armstrong(num):
     sum = 0
