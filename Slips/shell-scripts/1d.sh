@@ -9,5 +9,5 @@
 echo "Enter two numbers: "
 read -r num1 num2
 echo "multiplication of $num1 * $num2 = $((num1 * num2))"
-
+echo "modulus of $num1 % $num2 = $((num1 % num2))"
  
