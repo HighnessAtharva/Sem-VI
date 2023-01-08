@@ -9,9 +9,4 @@ else
     echo "Both are FALSE"
 fi
  
-if false || false 
-then
-    echo "Either of the two is TRUE"
-else
-    echo "Both are FALSE"
-fi
+
