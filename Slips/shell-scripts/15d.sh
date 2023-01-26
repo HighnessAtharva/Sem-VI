@@ -5,5 +5,5 @@
 
 echo "Enter today's date in MM DD YY format: "
 read -r month day year
-echo "Date is $month/$day/$year."
+echo "Date is $day/$month/$year."
  

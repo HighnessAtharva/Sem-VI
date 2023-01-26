@@ -9,5 +9,6 @@ def armstrong(num):
         temp //= 10
     return f"{num} is an armstrong number" if num == sum else f"{num} is not an armstrong number"
 
+
 print(armstrong(153))
 print(armstrong(154))

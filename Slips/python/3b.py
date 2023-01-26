@@ -1,18 +1,16 @@
 # Write a Python program to check if a given key already exists in a dictionary. If key exists replace with another key/value pair.
 
-from collections import OrderedDict
-
+days = {
+    "Sunday": "Fun Day",
+    "Monday": "Work Day",
+    "Tuesday": "Taco Day",
+    "Wednesday": "Hump Day",
+    "Thursday": "Thirsty Day",
+    "Friday": "New Music Yay!",
+    "Saturday": "Weekend Baby!"
+}
 
 def check_and_replace_key():
-    my_dict = OrderedDict()
-    my_dict["Sunday"] = "Fun Day"
-    my_dict["Monday"] = "Work Day"
-    my_dict["Tuesday"] = "Taco Day"
-    my_dict["Wednesday"] = "Hump Day"
-    my_dict["Thursday"] = "Thirsty Day"
-    my_dict["Friday"] = "New Music Yay!"
-    my_dict["Saturday"] = "Weekend Baby!"
-
     key = input("Enter a key to check: ")
     if key in my_dict:
         print("Key Found. Replace with new key/value pair.")
