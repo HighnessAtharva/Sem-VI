@@ -2,19 +2,21 @@
 
 from datetime import datetime
 
+
 class Person:
     def __init__(self, name, dob):
         self.name = name
         self.dob = dob
-        self.age=None
-    
+        self.age = None
+
     def eligible_to_vote(self):
-        self.age=datetime.now().year-int(self.dob[-4:])
+        self.age = datetime.now().year-int(self.dob[-4:])
         if self.age < 18:
             print(f"{self.name} is not eligible to vote.")
         else:
             print(f"{self.name} is eligible to vote.")
-            
+
+
 person1 = Person("John", "21/08/2002")
 person2 = Person("Kate", "01/09/2013")
 

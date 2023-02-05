@@ -1,4 +1,4 @@
-# Write a python program to count number of upper case letters, small case letters, digits in the file. 
+# Write a python program to count number of upper case letters, small case letters, digits in the file.
 
 with open("10B-file.txt", "r", encoding='utf-8') as f:
     data = f.read()

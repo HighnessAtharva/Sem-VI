@@ -6,11 +6,12 @@ class ReverseString:
 
     def reverse(self):
         return ' '.join(self.string.split()[::-1])
-    
+
+
 string = input("Enter string: ")
 if len(string.split()) <= 1:
     print("Oops! Need more than one word to reverse the string")
     exit(0)
-    
+
 reverse_string = ReverseString(string)
 print(reverse_string.reverse())

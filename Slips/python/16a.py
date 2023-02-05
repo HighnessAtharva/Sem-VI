@@ -14,7 +14,7 @@ radiohead_discography = {
 print("Sorted by key (ascending):")
 for key in sorted(radiohead_discography):
     print(key, radiohead_discography[key])
-    
+
 print("=====================================")
 
 print("Sorted by key (descending):")

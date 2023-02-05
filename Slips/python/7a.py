@@ -1,4 +1,4 @@
-# Write a Python program to accept n numbers in list and remove duplicates from a list.  
+# Write a Python program to accept n numbers in list and remove duplicates from a list.
 
 total_numbers = int(input("Enter total numbers: "))
 my_list = [int(input("Enter number: ")) for _ in range(total_numbers)]
