@@ -21,10 +21,7 @@ def check_and_replace_key():
         new_key = input("Enter new key: ")
         new_value = input("Enter new value: ")
 
-        # preserve order and replace key with new key/value pair
-        my_dict = OrderedDict((new_key, new_value) if k ==
-                              key else (k, v) for k, v in my_dict.items())
-
+        my_dict[key] = new_value
         for k, v in my_dict.items():
             print(k, v)
 

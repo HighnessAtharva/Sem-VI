@@ -4,8 +4,8 @@ def armstrong(num):
     sum = 0
     temp = num
     while temp:
-        digit = temp % 10
-        sum += digit ** 3
+        rem= temp % 10
+        sum +=rem ** 3
         temp //= 10
     return f"{num} is an armstrong number" if num == sum else f"{num} is not an armstrong number"
 

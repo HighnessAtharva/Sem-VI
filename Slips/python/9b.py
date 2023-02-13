@@ -4,14 +4,10 @@
 
 my_str= 'thequickbrownfoxjumpsoverthelazydog'
 print("Original string: ",my_str)
-counter={}
-for x in my_str:
-    if my_str.count(x) > 1:
-        count=my_str.count(x)
-        counter[x]=count
+counter={x:my_str.count(x) for x in my_str if my_str.count(x) > 1}
 
 print("Repeated characters: ")
 for key, value in sorted(counter.items()):
-    print(key, "-", value, end=", ")
+    print(key, "->", value, end="\n")
 
  

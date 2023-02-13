@@ -1,8 +1,9 @@
 # Write a python script to implement bubble sort using list.
 
 def bubble_sort(list):
-    for _ in range(len(list)):
-        for j in range(len(list)-1):
+    N= len(list)
+    for i in range(N):
+        for j in range(N-1):
             if list[j] > list[j+1]:
                 list[j], list[j+1] = list[j+1], list[j]
     return list
