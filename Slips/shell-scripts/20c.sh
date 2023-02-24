@@ -6,4 +6,8 @@ mkdir -p abc/123/pqr
 cd abc/123/pqr || exit
 mv ../../../abc ../../../melody
 
+# OR 
+
+# mv /home/abc/123/pqr /home/abc/123/melody
+
 
