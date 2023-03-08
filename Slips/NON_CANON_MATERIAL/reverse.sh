@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # accept a number and print its reverse
-
 echo "Enter a number: "
 read num
  

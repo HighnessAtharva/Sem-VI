@@ -1,12 +1,13 @@
 import pickle
   
 def storeData():
-    RockLee = {'Name' : 'Rock Lee', 'Affiliation' : 'Konohagakure ', 'age' : 28, 'jutsu' : 'Eight Gates'}
-    Gaara = {'Name' : 'Gaara of The Sand', 'Affiliation' : 'Sunagakure', 'age' : 18, 'jutsu' : 'Sand Coffin'}
-
-
-    shinobis = {'RockLee': RockLee, 'Gaara': Gaara}
-    with open('11B-file', 'ab') as f:
+    
+    shinobis = {
+        'RockLee':{'Name' : 'Rock Lee', 'Affiliation' : 'Konohagakure ', 'age' : 28, 'jutsu' : 'Eight Gates'}, 
+        'Gaara': {'Name' : 'Gaara of The Sand', 'Affiliation' : 'Sunagakure', 'age' : 18, 'jutsu' : 'Sand Coffin'}
+    }
+    
+    with open('11B-file', 'wb') as f:
         pickle.dump(shinobis, f)
   
 def loadData():

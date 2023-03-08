@@ -26,6 +26,5 @@ done
 # find the LCM
 lcm=$((num1 * num2 / gcd))
 
-
 echo "GCD of $num1 and $num2 is $gcd"
 echo "LCM of $num1 and $num2 is $lcm"

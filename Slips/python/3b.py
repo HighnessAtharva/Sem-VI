@@ -18,7 +18,6 @@ def check_and_replace_key():
     key = input("Enter a key to check: ")
     if key in my_dict:
         print("Key Found. Replace with new key/value pair.")
-        new_key = input("Enter new key: ")
         new_value = input("Enter new value: ")
 
         my_dict[key] = new_value
