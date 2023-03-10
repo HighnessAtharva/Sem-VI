@@ -1,0 +1,671 @@
+#!/bin/sh
+
+# Try changing permissions of a non-existent file but the command output shouldn’t show any error message at all.      
+
+# chmod 777 /tmp/xyz 2> /dev/null
+
+# ALTERNATE SOLUTION:
+
+chmod 777 fake.c --quiet#!/bin/sh
+
+# Write a shell script to accept two numbers from user and display their addition and increment.                                               
+#         If user enters two numbers 6 and 5, the output should be
+#        The subtraction of 6 and 5 is 11.
+#         5++ =  6
+#         6-- = 5     
+
+echo "Enter two numbers: "
+read -r num1 num2
+ 
+echo "The addition of $num1 and $num2 is $((num1 + num2))"
+echo "$num1++ = $((num1+1))"
+echo "$num2-- = $((num2-1))"#!/bin/sh
+
+# Create a directory structure abc/123/pqr, change the name of directory “pqr” from “abc” as your present working directory. 
+
+mkdir -p abc/123/pqr
+cd abc
+mv 123/pqr 123/xyz
+
+
+#!/bin/sh
+
+# Write a shell script and check if a file /dev/tty7 is a character file or not.
+
+if [ -c /dev/tty7 ]
+then
+    echo "/dev/tty7 is a character file"
+else
+    echo "/dev/tty7 is not a character file"
+fi#!/bin/sh
+
+# List the contents arranged horizontally instead of usual vertical arrangement (sorted row-wise instead of column-wise).                                                     
+
+# NEED CONFIRMATION
+ls --sort none                 
+
+## OR
+ 
+ls -x#!/bin/sh
+
+# 4.Write a shell script to use LOGICAL OR (||) operator on two operands.For two operands “TRUE” and “FALSE”, the output should be Either of the two is TRUE.
+
+if true || false 
+then
+    echo "Either of the two is TRUE"
+else
+    echo "Both are FALSE"
+fi
+ 
+
+#!/bin/sh
+
+# Create a 0-byte file and change the permissions of a file to “rwxr-x—x” while displaying what changes were exactly made to current permissions.
+
+touch 0bytefile
+chmod u=rwx,g=rx,o=x 0bytefile
+ls -l 0bytefile
+#!/bin/sh
+
+# 4.Write a shell script to accept two numbers from user and display their multiplication and subtraction.
+#            If user enters two numbers 6 and 5, the output should be
+#            The multiplication of 6 and 5 is 30.
+#            The subtraction of 6 and 5 is 11.    
+
+echo "Enter two numbers: "
+read -r num1 num2
+echo "The multiplication of $num1 and $num2 is $((num1 * num2))."
+echo "The subtraction of $num1 and $num2 is $((num1 - num2))."
+#!/bin/sh
+
+# Remove all the read permission of all files and the files inside subdirectories of present working directory. 
+
+# CONFIRMATION NEEDED
+chmod -R -r .#!/bin/sh
+
+# Write a shell script to List the files and directories inside present working directory recursively without applying any sorting or color coding
+
+ls -R --sort none --color=never#!/bin/sh
+
+# Create a directory structure abc/123/pqr, change the name of directory “pqr” from “abc” as your present working directory.
+
+mkdir -p abc/123/pqr
+cd abc || exit
+mv 123/pqr/ 123/namechanged/#!/bin/sh
+
+# 4.Write a shell script to accept today’s date from user in MM DD YY format and display it as below.
+# Date is 17/05/22.                                                                          
+
+echo "Enter today's date in MM DD YY format: "
+read -r month day year
+echo "Date is $day/$month/$year."
+ #!/bin/sh
+
+# Use binary calculator to perform multiplication and division of any two integers.      
+
+echo "Enter two numbers: "
+read -r num1 num2
+echo "The multiplication of $num1 and $num2 is $(echo "$num1 * $num2" | bc)."
+echo "The division of $num1 and $num2 is $(echo "$num1 / $num2" | bc)."
+#!/bin/sh
+
+# Write a shell script to list the files and directories with their size in GB.	
+
+
+ls -l --block-size=GB#!/bin/sh
+
+# List all the directories except . and .. 
+
+# find . -type d -not \( -name '.' -or -name '..' \)
+
+# ALTERNATE
+# ls -A 
+
+# ALTERNATE 2
+ls --almost-all#!/bin/sh
+
+# Write a shell script to list the files and directories according to their modification time recursively.    
+
+ls -Rl --sort=time#!/bin/sh
+
+# List the files and directories with their size in GB.    
+
+
+ls -l --block-size=GB#!/bin/sh
+
+# Write a shell script to add permissions 753 to all the directories and subdirectories recursively.    
+
+chmod -R 753 .#!/bin/sh
+
+# Use redirection operator (>) to write today’s date in a file named “bmcc”. 
+
+date > bmcc
+echo "Fetched from the file bmcc-> $(cat bmcc)."
+#!/bin/sh
+
+# Write a shell script to write all the files and subdirectories inside / (root) directory to a file called “tree” in present working directory. Use redirection operator to redirect output of your shell script to “tree” file. 
+
+ls -Rl . > tree
+echo "Fetched from the file tree-> $(cat tree)."
+#!/bin/sh
+# List all the help file for ls command without using “man” command.  
+
+ls --help#!/bin/sh
+
+# Write a shell script to take input of two integerrs from user and display their modulus and multiplication.
+# If user enters two numbers 6 and 5, the output should be
+# The modulus of 6 and 5 is 1.
+# The multiplication of 6 and 5 is 30.   
+
+ 
+echo "Enter two numbers: "
+read -r num1 num2
+echo "multiplication of $num1 * $num2 = $((num1 * num2))"
+echo "modulus of $num1 % $num2 = $((num1 % num2))"
+ #!/bin/sh
+
+# Create directory structure abc/123/pqr, change the name of directory “abc” from “pqr” as your present working directory.  
+
+mkdir -p abc/123/pqr
+cd abc/123/pqr || exit
+mv ../../../abc ../../../melody
+
+# OR 
+
+# mv /home/abc/123/pqr /home/abc/123/melody
+
+
+#!/bin/sh
+
+# Write a shell script to display help pages of any three commands and return to the shell prompt automatically.  
+ 
+# NEED CONFIRMATION
+ls --help
+echo ""
+
+mv --help
+echo ""
+ 
+grep --help
+echo ""
+#!/bin/sh
+
+# Create a directory structure 123/456/890, create a 0 byte file inside “456” directory named “abc” while staying inside ~ (home) as your present working directory.  
+
+
+mkdir -p ~/123/456/890
+touch ~/123/456/abc
+ #!/bin/sh
+
+# 4.Write a shell script to accept an operand from user and use increment and decrement operators on it. 
+# For operand 8, the output should be
+# 	8++ = 9
+# 	8-- = 7       
+
+echo "Enter a number: "
+read -r num
+echo "$num++ = $((num + 1))"
+echo "$num-- = $((num - 1))"#!/bin/sh
+
+# List the files and directories according to their modification time (oldest first)
+
+ls -ltr
+ #!/bin/sh
+
+# 4.Write a shell script to take input of two integers from user and display their addition and subtraction.
+#         Ex.: If user enters two numbers 6 and 5, the output should be
+#         The addition of 6 and 5 is 11.
+#         The subtraction of 6 and 5 is 1.
+
+echo "Enter two number: "
+read -r a b
+echo "The addition of $a and $b is $((a + b))"
+echo "The subtraction of $a and $b is $((a - b))"#!/bin/sh
+
+# Create a directory structure abc/pqr/xyz/def, delete the directory “xyz”. 
+
+mkdir -p abc/pqr/xyz/def
+rm -r abc/pqr/xyz#!/bin/sh
+
+# Write a shell script and check if a file /dev/console is a block file or not.
+# NEED CONFIRMATION
+if [ -b /dev/console/ ]; then
+    echo "File /dev/console is a block file"
+else
+    echo "File /dev/console is not a block file"
+fi#!/bin/sh
+
+# 3.List all the details of “man” command
+
+man man#!/bin/sh
+
+# Write a shell script to take input of two integers from user and display their subtraction and comparison.
+# If user enters two numbers 6 and 5, the output should be
+# The subtraction of 6 and 5 is 1.
+# 6 is greater than 5.
+
+echo "Enter two number: "
+read -r a b
+echo "The subtraction of $a and $b is $((a - b))"
+if [ "$a" -gt "$b" ]; then
+    echo "$a is greater than $b"
+elif [ "$a" -eq "$b" ]; then
+    echo "$a is equal to $b"
+else
+    echo "$a is less than $b"
+fi#!/bin/sh
+
+# Use the ls -l command but show the output of Size column in human readable format without using “—block-size” option.    
+
+ls -lh#!/bin/sh
+
+# Write a shell script and check if a file /dev/full is a character file or not.
+
+if [ -c /dev/full ]
+then
+    echo "File /dev/full is a character file"
+else
+    echo "File /dev/full is not a character file"
+fi#!/bin/sh
+
+# Create a directory structure abc/pqr/xyz/def, make your present working directory abc/pqr/xyz/def, and then change your present working directory to /etc/hosts using RELATIVE PATH.    
+
+mkdir -p abc/pqr/xyz/def
+cd abc/pqr/xyz/def || exit
+echo "Current Directory-> $(pwd)"
+
+cd ~/../../etc/ || exit
+echo "Current Directory-> $(pwd)"
+mkdir host1
+cd host1 || exit
+echo "Current Directory-> $(pwd)"#!/bin/sh
+
+# Write a shell script and check if a file /dev/mapper is a directory file or not.
+
+if [ -d /dev/mapper ]
+then
+    echo "File /dev/mapper is a directory file"
+else
+    echo "File /dev/mapper is not a directory file"
+fi#!/bin/sh
+
+# Use echo command to print five \ (backslash) in a row without spaces
+
+echo "\\\\\\\\\\\\\\\\\\\\"#!/bin/sh
+
+# Write a shell script to use LOGICAL AND (&&) operator on two operands.
+#         For two operands “TRUE” and “FALSE”, the output should be 
+#         Both are not TRUE.     
+
+if  true  &&  false 
+then
+    echo "Both are TRUE"
+else
+    echo "Both are not TRUE"
+fi
+
+if true  &&  true 
+then
+    echo "Both are TRUE"
+else
+    echo "Both are not TRUE"
+fi
+
+#!/bin/sh
+
+# List all the directories along with its subdirectories recursively.
+
+ls -R
+#!/bin/sh
+
+# Write a shell script to take input of two integers from user and compare them and display which one is greater.
+#        If user enters two numbers 6 and 5, the output should be
+#        6 is greater than 5.    
+
+echo "Enter two numbers: "
+read -r num1 num2
+ 
+if [ "$num1" -gt "$num2" ]
+then
+    echo "$num1 is greater than $num2"
+elif [ "$num1" -eq "$num2" ]
+then
+    echo "$num1 is equal to $num2"
+else
+    echo "$num2 is greater than $num1"
+fi#!/bin/sh
+
+# Try changing permissions of a non-existent file but the command output shouldn’t show any error message at all.      
+
+# chmod 777 /tmp/xyz 2> /dev/null
+
+# ALTERNATE SOLUTION:
+
+chmod 777 fake.c --quiet#!/bin/sh
+
+# Write a shell script to accept two numbers from user and display their addition and increment.                                               
+#         If user enters two numbers 6 and 5, the output should be
+#        The subtraction of 6 and 5 is 11.
+#         5++ =  6
+#         6-- = 5     
+
+echo "Enter two numbers: "
+read -r num1 num2
+ 
+echo "The addition of $num1 and $num2 is $((num1 + num2))"
+echo "$num1++ = $((num1+1))"
+echo "$num2-- = $((num2-1))"#!/bin/sh
+
+# Create a directory structure abc/123/pqr, change the name of directory “pqr” from “abc” as your present working directory. 
+
+mkdir -p abc/123/pqr
+cd abc
+mv 123/pqr 123/xyz
+
+
+#!/bin/sh
+
+# Write a shell script and check if a file /dev/tty7 is a character file or not.
+
+if [ -c /dev/tty7 ]
+then
+    echo "/dev/tty7 is a character file"
+else
+    echo "/dev/tty7 is not a character file"
+fi#!/bin/sh
+
+# List the contents arranged horizontally instead of usual vertical arrangement (sorted row-wise instead of column-wise).                                                     
+
+# NEED CONFIRMATION
+ls --sort none                 
+
+## OR
+ 
+ls -x#!/bin/sh
+
+# 4.Write a shell script to use LOGICAL OR (||) operator on two operands.For two operands “TRUE” and “FALSE”, the output should be Either of the two is TRUE.
+
+if true || false 
+then
+    echo "Either of the two is TRUE"
+else
+    echo "Both are FALSE"
+fi
+ 
+
+#!/bin/sh
+
+# Create a 0-byte file and change the permissions of a file to “rwxr-x—x” while displaying what changes were exactly made to current permissions.
+
+touch 0bytefile
+chmod u=rwx,g=rx,o=x 0bytefile
+ls -l 0bytefile
+#!/bin/sh
+
+# 4.Write a shell script to accept two numbers from user and display their multiplication and subtraction.
+#            If user enters two numbers 6 and 5, the output should be
+#            The multiplication of 6 and 5 is 30.
+#            The subtraction of 6 and 5 is 11.    
+
+echo "Enter two numbers: "
+read -r num1 num2
+echo "The multiplication of $num1 and $num2 is $((num1 * num2))."
+echo "The subtraction of $num1 and $num2 is $((num1 - num2))."
+#!/bin/sh
+
+# Remove all the read permission of all files and the files inside subdirectories of present working directory. 
+
+# CONFIRMATION NEEDED
+chmod -R -r .#!/bin/sh
+
+# Write a shell script to List the files and directories inside present working directory recursively without applying any sorting or color coding
+
+ls -R --sort none --color=never#!/bin/sh
+
+# Create a directory structure abc/123/pqr, change the name of directory “pqr” from “abc” as your present working directory.
+
+mkdir -p abc/123/pqr
+cd abc || exit
+mv 123/pqr/ 123/namechanged/#!/bin/sh
+
+# 4.Write a shell script to accept today’s date from user in MM DD YY format and display it as below.
+# Date is 17/05/22.                                                                          
+
+echo "Enter today's date in MM DD YY format: "
+read -r month day year
+echo "Date is $day/$month/$year."
+ #!/bin/sh
+
+# Use binary calculator to perform multiplication and division of any two integers.      
+
+echo "Enter two numbers: "
+read -r num1 num2
+echo "The multiplication of $num1 and $num2 is $(echo "$num1 * $num2" | bc)."
+echo "The division of $num1 and $num2 is $(echo "$num1 / $num2" | bc)."
+#!/bin/sh
+
+# Write a shell script to list the files and directories with their size in GB.	
+
+
+ls -l --block-size=GB#!/bin/sh
+
+# List all the directories except . and .. 
+
+# find . -type d -not \( -name '.' -or -name '..' \)
+
+# ALTERNATE
+# ls -A 
+
+# ALTERNATE 2
+ls --almost-all#!/bin/sh
+
+# Write a shell script to list the files and directories according to their modification time recursively.    
+
+ls -Rl --sort=time#!/bin/sh
+
+# List the files and directories with their size in GB.    
+
+
+ls -l --block-size=GB#!/bin/sh
+
+# Write a shell script to add permissions 753 to all the directories and subdirectories recursively.    
+
+chmod -R 753 .#!/bin/sh
+
+# Use redirection operator (>) to write today’s date in a file named “bmcc”. 
+
+date > bmcc
+echo "Fetched from the file bmcc-> $(cat bmcc)."
+#!/bin/sh
+
+# Write a shell script to write all the files and subdirectories inside / (root) directory to a file called “tree” in present working directory. Use redirection operator to redirect output of your shell script to “tree” file. 
+
+ls -Rl . > tree
+echo "Fetched from the file tree-> $(cat tree)."
+#!/bin/sh
+# List all the help file for ls command without using “man” command.  
+
+ls --help#!/bin/sh
+
+# Write a shell script to take input of two integerrs from user and display their modulus and multiplication.
+# If user enters two numbers 6 and 5, the output should be
+# The modulus of 6 and 5 is 1.
+# The multiplication of 6 and 5 is 30.   
+
+ 
+echo "Enter two numbers: "
+read -r num1 num2
+echo "multiplication of $num1 * $num2 = $((num1 * num2))"
+echo "modulus of $num1 % $num2 = $((num1 % num2))"
+ #!/bin/sh
+
+# Create directory structure abc/123/pqr, change the name of directory “abc” from “pqr” as your present working directory.  
+
+mkdir -p abc/123/pqr
+cd abc/123/pqr || exit
+mv ../../../abc ../../../melody
+
+# OR 
+
+# mv /home/abc/123/pqr /home/abc/123/melody
+
+
+#!/bin/sh
+
+# Write a shell script to display help pages of any three commands and return to the shell prompt automatically.  
+ 
+# NEED CONFIRMATION
+ls --help
+echo ""
+
+mv --help
+echo ""
+ 
+grep --help
+echo ""
+#!/bin/sh
+
+# Create a directory structure 123/456/890, create a 0 byte file inside “456” directory named “abc” while staying inside ~ (home) as your present working directory.  
+
+
+mkdir -p ~/123/456/890
+touch ~/123/456/abc
+ #!/bin/sh
+
+# 4.Write a shell script to accept an operand from user and use increment and decrement operators on it. 
+# For operand 8, the output should be
+# 	8++ = 9
+# 	8-- = 7       
+
+echo "Enter a number: "
+read -r num
+echo "$num++ = $((num + 1))"
+echo "$num-- = $((num - 1))"#!/bin/sh
+
+# List the files and directories according to their modification time (oldest first)
+
+ls -ltr
+ #!/bin/sh
+
+# 4.Write a shell script to take input of two integers from user and display their addition and subtraction.
+#         Ex.: If user enters two numbers 6 and 5, the output should be
+#         The addition of 6 and 5 is 11.
+#         The subtraction of 6 and 5 is 1.
+
+echo "Enter two number: "
+read -r a b
+echo "The addition of $a and $b is $((a + b))"
+echo "The subtraction of $a and $b is $((a - b))"#!/bin/sh
+
+# Create a directory structure abc/pqr/xyz/def, delete the directory “xyz”. 
+
+mkdir -p abc/pqr/xyz/def
+rm -r abc/pqr/xyz#!/bin/sh
+
+# Write a shell script and check if a file /dev/console is a block file or not.
+# NEED CONFIRMATION
+if [ -b /dev/console/ ]; then
+    echo "File /dev/console is a block file"
+else
+    echo "File /dev/console is not a block file"
+fi#!/bin/sh
+
+# 3.List all the details of “man” command
+
+man man#!/bin/sh
+
+# Write a shell script to take input of two integers from user and display their subtraction and comparison.
+# If user enters two numbers 6 and 5, the output should be
+# The subtraction of 6 and 5 is 1.
+# 6 is greater than 5.
+
+echo "Enter two number: "
+read -r a b
+echo "The subtraction of $a and $b is $((a - b))"
+if [ "$a" -gt "$b" ]; then
+    echo "$a is greater than $b"
+elif [ "$a" -eq "$b" ]; then
+    echo "$a is equal to $b"
+else
+    echo "$a is less than $b"
+fi#!/bin/sh
+
+# Use the ls -l command but show the output of Size column in human readable format without using “—block-size” option.    
+
+ls -lh#!/bin/sh
+
+# Write a shell script and check if a file /dev/full is a character file or not.
+
+if [ -c /dev/full ]
+then
+    echo "File /dev/full is a character file"
+else
+    echo "File /dev/full is not a character file"
+fi#!/bin/sh
+
+# Create a directory structure abc/pqr/xyz/def, make your present working directory abc/pqr/xyz/def, and then change your present working directory to /etc/hosts using RELATIVE PATH.    
+
+mkdir -p abc/pqr/xyz/def
+cd abc/pqr/xyz/def || exit
+echo "Current Directory-> $(pwd)"
+
+cd ~/../../etc/ || exit
+echo "Current Directory-> $(pwd)"
+mkdir host1
+cd host1 || exit
+echo "Current Directory-> $(pwd)"#!/bin/sh
+
+# Write a shell script and check if a file /dev/mapper is a directory file or not.
+
+if [ -d /dev/mapper ]
+then
+    echo "File /dev/mapper is a directory file"
+else
+    echo "File /dev/mapper is not a directory file"
+fi#!/bin/sh
+
+# Use echo command to print five \ (backslash) in a row without spaces
+
+echo "\\\\\\\\\\\\\\\\\\\\"#!/bin/sh
+
+# Write a shell script to use LOGICAL AND (&&) operator on two operands.
+#         For two operands “TRUE” and “FALSE”, the output should be 
+#         Both are not TRUE.     
+
+if  true  &&  false 
+then
+    echo "Both are TRUE"
+else
+    echo "Both are not TRUE"
+fi
+
+if true  &&  true 
+then
+    echo "Both are TRUE"
+else
+    echo "Both are not TRUE"
+fi
+
+#!/bin/sh
+
+# List all the directories along with its subdirectories recursively.
+
+ls -R
+#!/bin/sh
+
+# Write a shell script to take input of two integers from user and compare them and display which one is greater.
+#        If user enters two numbers 6 and 5, the output should be
+#        6 is greater than 5.    
+
+echo "Enter two numbers: "
+read -r num1 num2
+ 
+if [ "$num1" -gt "$num2" ]
+then
+    echo "$num1 is greater than $num2"
+elif [ "$num1" -eq "$num2" ]
+then
+    echo "$num1 is equal to $num2"
+else
+    echo "$num2 is greater than $num1"
+fi
