@@ -1,0 +1,139 @@
+#!/bin/bash
+
+# accept two strings and compare them to see if they are equal or not
+
+echo "Enter two strings: "
+read str1 str2
+
+if [ $str1 = $str2 ]
+then
+    echo "Strings are equal"
+else
+    echo "Strings are not equal"
+fi#!/bin/bash
+
+# Accept two numbers and print their GCD and LCM
+echo "Enter two numbers: "
+read num1 num2
+
+# find the smaller number
+if [ $num1 -lt $num2 ]
+then
+    smaller=$num1
+else
+    smaller=$num2
+fi
+
+# use while loop to find the GCD
+i=1
+while [ $i -le $smaller ]
+do
+    if [ $((num1 % i)) -eq 0 ] && [ $((num2 % i)) -eq 0 ]
+    then
+        gcd=$i
+    fi
+    i=$((i + 1))
+done
+
+# find the LCM
+lcm=$((num1 * num2 / gcd))
+
+echo "GCD of $num1 and $num2 is $gcd"
+echo "LCM of $num1 and $num2 is $lcm"#!/bin/bash
+
+# accept three numbers and print the greatest of them
+
+echo "Enter three numbers: "
+read num1 num2 num3
+ 
+
+if [ $num1 -eq $num2 ] && [ $num1 -eq $num3 ] 
+then
+    echo "All numbers are equal"
+elif [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]
+then
+    echo "Greatest number is $num1"
+elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ]
+then
+    echo "Greatest number is $num2"
+else
+    echo "Greatest number is $num3"
+fi#!/bin/bash
+
+# accept a year and print whether it is a leap year or not
+
+echo "Enter a year: "
+read year
+ 
+if [ $((year % 4)) -eq 0 ]
+then
+    echo "Year is a leap year"
+else
+    echo "Year is not a leap year"
+fi#!/bin/bash
+
+# accept a number and print its multiplication table
+
+echo "Enter a number: "
+read num
+ 
+echo "Enter a range for multiplication:"
+read range
+
+# while loop
+i=1
+while [ $i -le $range ]
+do
+    echo "$num * $i = $((num * i))"
+    i=$((i + 1))
+done
+#!/bin/bash
+
+# accept a number and print whether it is odd or even
+
+echo "Enter a number: "
+read num
+
+if [ $((num % 2)) -eq 0 ]
+then
+    echo "Number is even"
+else
+    echo "Number is odd"
+fi#!/bin/bash
+
+# accept a number and print its reverse
+echo "Enter a number: "
+read num
+ 
+# while loop
+while [ $num -gt 0 ]
+do
+    rem=$((num % 10))
+    rev=$((rev * 10 + rem))
+    num=$((num / 10))
+done
+ 
+echo "Reverse of the number is $rev"#!/bin/bash
+
+# accept side of square and area of square.
+
+echo "Enter side of square: "
+read side
+ 
+area=$((side * side))
+echo "Area of square is $area"#!/bin/bash
+
+# accept a number and print its sum of digits
+echo "Enter a number: "
+read num
+
+# while loop
+sum=0
+while [ $num -gt 0 ]
+do
+    rem=$((num % 10))
+    sum=$((sum + rem))
+    num=$((num / 10))
+done
+
+echo "Sum of digits of the number is $sum"

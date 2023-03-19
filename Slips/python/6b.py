@@ -12,7 +12,7 @@ class StringOperations:
         print(self.string.upper())
 
     def reverse_string(self):
-        print(" ".join(self.string.split()[::-1]).lower())
+        print(" ".join(reversed(self.string.split())).lower())
 
 
 my_string = StringOperations()
