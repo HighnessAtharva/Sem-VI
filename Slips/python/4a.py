@@ -5,9 +5,8 @@ def check_prime(N):
     if N <= 1:
         return (f"{N} is not a prime number")
     for i in range(2, N):
-        if (N % i) == 0:
+        if N % i == 0:
             return (f"{N} is not a prime number")
-            break
     else:
         return (f"{N} is a prime number")
 

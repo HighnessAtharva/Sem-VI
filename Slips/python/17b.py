@@ -16,5 +16,5 @@ class Person:
 person1 = Person("John", date(1990, 1, 1))
 person2 = Person("Jane", date(2005, 6, 15))
 
-print(person1.name, "is eligible to vote:", person1.is_eligible_to_vote())
-print(person2.name, "is eligible to vote:", person2.is_eligible_to_vote())
+print(f"{person1.name} is eligible to vote: {person1.is_eligible_to_vote()}")
+print(f"{person2.name} is eligible to vote: {person2.is_eligible_to_vote()}")

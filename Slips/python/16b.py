@@ -1,9 +1,6 @@
 # Define a class named Shape and its subclass Square. The subclass has an init function which takes an argument Length. Both classes should have methods to calculate area and perimeter of a given shape.                                                                       
 
 class Shape:
-    def __init__(self, length):
-        self.length = length
-        
     def area(self):
         print(f"Area of {type(self).__name__}: {self.length ** 2}")
         
@@ -12,7 +9,7 @@ class Shape:
         
 class Square(Shape):
     def __init__(self, length):
-        super().__init__(length)
+        self.length = length
     
     def area(self):
         super().area()

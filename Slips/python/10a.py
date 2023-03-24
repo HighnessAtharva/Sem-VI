@@ -6,7 +6,7 @@ class Queue:
     def enqueue(self, item):
         self.queue.append(item)
     def dequeue(self):
-        return None if len(self.queue) < 1 else self.queue.pop(0)
+        return None if self.size() < 1 else self.queue.pop(0)
     def size(self):
         return len(self.queue)
     def print_queue(self):

@@ -2,17 +2,14 @@
 # Further modify the program to reverse a string word by word and print it in lower case.
 
 class StringOperations:
-    
-    string = str()
-
     def get_string(self):
-        self.string = input("Enter a string: ")
+        self.s = input("Enter a string: ")
 
     def print_string(self):
-        print(self.string.upper())
+        print(self.s.upper())
 
     def reverse_string(self):
-        print(" ".join(reversed(self.string.split())).lower())
+        print(" ".join(self.s.lower().split()[::-1]))
 
 
 my_string = StringOperations()

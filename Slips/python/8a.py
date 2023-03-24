@@ -2,9 +2,8 @@
 
 def encypt_func(txt, shift):  
     result = str()  
-    for i in range(len(txt)):  
-        char = txt[i]
-        if (char.isupper()):  
+    for char in txt:  
+        if char.isupper():  
             result += chr((ord(char) + shift - 64) % 26 + 65)
         else:  
             result += chr((ord(char) + shift - 96) % 26 + 97)  

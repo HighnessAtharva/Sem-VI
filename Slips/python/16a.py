@@ -12,11 +12,11 @@ radiohead_discography = {
 }
 
 print("Sorted by key (ascending):")
-for key in sorted(radiohead_discography):
-    print(key, radiohead_discography[key])
+for k, v in sorted(radiohead_discography.items()):
+    print(k, v)
     
 print("=====================================")
 
 print("Sorted by key (descending):")
-for key in sorted(radiohead_discography, reverse=True):
-    print(key, radiohead_discography[key])
+for k, v in sorted(radiohead_discography.items(), reverse=True):
+    print(k, v)

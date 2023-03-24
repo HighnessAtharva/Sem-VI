@@ -34,9 +34,8 @@ for _ in range(n):
     manager.accept()
     managers.append(manager)
     if manager.total_salary() > max_salary:
-        max_salary = manager.total_salary()
         max_salary_manager = manager
 
-print(f"Manager {max_salary_manager.name} has maximum total salary: {max_salary}")
+print(f"Manager {max_salary_manager.name} has maximum total salary: {max_salary_manager.total_salary()}")
 
     
